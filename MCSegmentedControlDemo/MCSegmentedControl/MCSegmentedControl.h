@@ -13,57 +13,27 @@
 	NSMutableArray *_items;
 	
 	UIFont  *_font;
-	UIColor *_selectedItemColor;
+    UIColor *_selectedItemColor;
 	UIColor *_unselectedItemColor;
-
-	UIColor *_selectedItemShadowColor;
-	UIColor *_unselectedItemShadowColor;
-	
-	CGFloat _cornerRadius;
-	
-	NSArray *_unSelectedItemBackgroundGradientColors;
+	UIColor *_selectedSegmentColor;
+	UIColor *_unselectedSegmentColor;
 }
 
-/**
- * Font for the segments with title
- * Default is sysyem bold 18points
- */
+// JH: Font for the segments with title Default is sysyem bold 18points
 @property (nonatomic, retain) UIFont  *font;
 
-/**
- * Color of the item in the selected segment
- * Applied to text and images
- */
+// JH: Color of the item in the selected segment
 @property (nonatomic, retain) UIColor *selectedItemColor;
-
-/**
- * Color of the items not in the selected segment
- * Applied to text and images
- */
 @property (nonatomic, retain) UIColor *unselectedItemColor;
 
-/**
- * Default is black with .2 alpha
- */
-@property (nonatomic, retain) UIColor *selectedItemShadowColor;
+// JH: Applied to text and images
+@property (nonatomic, retain) UIColor *selectedSegmentColor;
+@property (nonatomic, retain) UIColor *unselectedSegmentColor;
 
-
-/**
- * Default is white
- */
-@property (nonatomic, retain) UIColor *unselectedItemShadowColor;
-
-
-@property (nonatomic, assign) CGFloat cornerRadius;
-
-/**
- * Contains the 2 gradient components for the non-selected items
- * Default is white and gray 200/255.0
- */
-@property (nonatomic, retain) NSArray *unSelectedItemBackgroundGradientColors;
-
-
-
-
+- (void) setMCSegmentedControlWithTintColor: (UIColor *)tintColor
+                         SelectedSegmentColor: (UIColor *)selectedSegmentColor
+                       UnselectedSegmentColor: (UIColor *)unselectedSegmentColor
+                            SelectedItemColor: (UIColor *)selectedItemColor
+                          UnselectedItemColor: (UIColor *)unselectedItemColor;
 
 @end

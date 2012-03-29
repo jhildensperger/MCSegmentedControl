@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		289F881314C755C90083BEE8 /* UIColor-Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 289F881214C755C90083BEE8 /* UIColor-Expanded.m */; };
 		954F4D63138EE48A009E0CDB /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 954F4D61138EE48A009E0CDB /* star.png */; };
 		95BB3BA213084E3D0058E517 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95BB3BA113084E3D0058E517 /* UIKit.framework */; };
 		95BB3BA413084E3D0058E517 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95BB3BA313084E3D0058E517 /* Foundation.framework */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		289F881114C755C90083BEE8 /* UIColor-Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor-Expanded.h"; sourceTree = "<group>"; };
+		289F881214C755C90083BEE8 /* UIColor-Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor-Expanded.m"; sourceTree = "<group>"; };
 		954F4D61138EE48A009E0CDB /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		954F4D62138EE48A009E0CDB /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
 		95BB3B9D13084E3D0058E517 /* MCSegmentedControlDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCSegmentedControlDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		289F881514C755CF0083BEE8 /* UIColor-Expanded */ = {
+			isa = PBXGroup;
+			children = (
+				289F881114C755C90083BEE8 /* UIColor-Expanded.h */,
+				289F881214C755C90083BEE8 /* UIColor-Expanded.m */,
+			);
+			name = "UIColor-Expanded";
+			sourceTree = "<group>";
+		};
 		954F4D60138EE2F0009E0CDB /* MCSegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +80,7 @@
 		95BB3B9213084E3D0058E517 = {
 			isa = PBXGroup;
 			children = (
+				289F881514C755CF0083BEE8 /* UIColor-Expanded */,
 				954F4D60138EE2F0009E0CDB /* MCSegmentedControl */,
 				95BB3BA713084E3D0058E517 /* MCSegmentedControlDemo */,
 				95BB3BA013084E3D0058E517 /* Frameworks */,
@@ -189,6 +202,7 @@
 				95BB3BB213084E3D0058E517 /* AppController.m in Sources */,
 				95BB3BB813084E3D0058E517 /* MCSegmentedControlDemoViewController.m in Sources */,
 				95BB3BC313084E550058E517 /* MCSegmentedControl.m in Sources */,
+				289F881314C755C90083BEE8 /* UIColor-Expanded.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

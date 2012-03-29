@@ -7,12 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MCSegmentedControl.h"
 
 @interface MCSegmentedControlDemoViewController : UIViewController {
 	
 	UILabel *_testLabel;
+    IBOutlet MCSegmentedControl *segmentedControl;
 }
 
 @property (nonatomic, retain) IBOutlet UILabel *testLabel;
+
+- (IBAction)segmentedControlDidChange:(MCSegmentedControl *)sender; 
 
 @end

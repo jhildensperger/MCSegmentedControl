@@ -5,9 +5,12 @@
 //  Created by Matteo Caldari on 13/02/11.
 //  Copyright 2011 Matteo Caldari. All rights reserved.
 //
+#import <QuartzCore/QuartzCore.h>
 
 #import "MCSegmentedControlDemoViewController.h"
 #import "MCSegmentedControl.h"
+#import "UIColor-Expanded.h"
+@class MCSegmentedControl;
 
 @implementation MCSegmentedControlDemoViewController
 
@@ -33,29 +36,14 @@
 {
     [super viewDidLoad];
 	self.view.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1.0];
-	NSArray *items = [NSArray arrayWithObjects:
-					  @"one",
-					  @"two",
-					  [UIImage imageNamed:@"star.png"],
-					  nil];
-	MCSegmentedControl *segmentedControl = [[MCSegmentedControl alloc] initWithItems:items];
-	
-	// set frame, add to view, set target and action for value change as usual
-	segmentedControl.frame = CGRectMake(10.0f, 208.0f, 300.0f, 44.0f);
-	[self.view addSubview:segmentedControl];
-	[segmentedControl addTarget:self action:@selector(segmentedControlDidChange:) forControlEvents:UIControlEventValueChanged];
-	
-	segmentedControl.selectedSegmentIndex = 1;
-	
-	// Set a tint color
-	segmentedControl.tintColor = [UIColor colorWithRed:.0 green:.6 blue:.0 alpha:1.0];
-	
-	// Customize font and items color
-	segmentedControl.selectedItemColor   = [UIColor whiteColor];
-	segmentedControl.unselectedItemColor = [UIColor darkGrayColor];
-
-	[self.view addSubview:segmentedControl];
-	[segmentedControl release];
+    
+    [segmentedControl setMCSegmentedControlWithTintColor:[UIColor colorWithHexString:@"e0e0e0"]
+                                      SelectedSegmentColor:[UIColor colorWithHexString:@"931317"] 
+                                    UnselectedSegmentColor:[UIColor colorWithHexString:@"595959"] 
+                                         SelectedItemColor:[UIColor colorWithHexString:@"e0e0e0"] 
+                                       UnselectedItemColor:[UIColor colorWithHexString:@"181818"]];
+    
+    segmentedControl.font = [UIFont fontWithName:@"Helvetica" size:20];
 }
 
 - (void)viewDidUnload
@@ -71,7 +59,7 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void)segmentedControlDidChange:(MCSegmentedControl *)sender 
+- (IBAction)segmentedControlDidChange:(MCSegmentedControl *)sender 
 {
 	_testLabel.text = [NSString stringWithFormat:@"%@ %d", _testLabel.text, [sender selectedSegmentIndex]];
 	NSLog(@"%d", [sender selectedSegmentIndex]);
